@@ -14,13 +14,13 @@ read -r -d '' usage <<EOF
 EOF
 
 # Examples:
-# pm/pm.sh -f ids -z true issues 8191 8338 | pm/pm.sh -f summary issues
-# pm/pm.sh -c true -f summary issues '{"created_on": ">=2019-10-01", "fixed_version_id": "!249"}'
-# pm/pm.sh -c true -f summary -z true issues '{"created_on": "lw"}' | sort
-# pm/pm.sh issue open 7784
-# pm/pm.sh versions
-# pm/pm.sh queries
-# pm/pm.sh -v 250 issues
+# pm -f ids -z true issues 8191 8338 | pm/pm.sh -f summary issues
+# pm -c true -f summary issues '{"created_on": ">=2019-10-01", "fixed_version_id": "!249"}'
+# pm -c true -f summary -z true issues '{"created_on": "lw"}' | sort
+# pm issue open 7784
+# pm versions
+# pm queries
+# pm -v 250 issues
 
 #####################################################################
 # PARSE OPTS FUNCTIONS FROM parse_opts.sh
