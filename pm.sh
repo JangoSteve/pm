@@ -236,6 +236,8 @@ function outputIssues() {
   decoded="$(echo "${1}" | base64 --decode)"
   if [ "${arg_f}" == "ids" ]; then
     echo "$decoded" | jq -r '.[] | .id'
+  elif [ "${arg_f}" == "commas" ]; then
+    echo "$decoded" | jq -r '.[] | .id' | xargs printf ', %s'  | sed 's/^, //'
   elif [ "${arg_f}" == "full" ]; then
     echo "$decoded" | jq -r '.'
   elif [ "${arg_f}" == "raw" ]; then
